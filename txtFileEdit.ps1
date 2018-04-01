@@ -8,15 +8,26 @@ $indexes = '<add key="documents" value="true"/>', '<add key="links" value="true"
 
 $allConfigs = $confFile, $confFile1, $confFile2
 
-Foreach($index in $indexes)
-{
-    $replacedIndex = $index.Replace('true', 'false')
+# foreach ($index in $indexes) {
+#     foreach ($conf in $allConfigs) {
+#         if ($conf -like $("*$index*")) {
+#             Write-Host $index      
+#         }
+#         else {
+#             Write-Host "kur"
+#         }
+#     }
+# }
 
-    Foreach ($conf in $allConfigs)
-    {
-        
+for ($i = 0; $i -lt $indexes.Length; $i++) {
+    # foreach ($conf in $allConfigs) {
+    #     if ($conf -contains in) {
+            
+    #     }
+    # } 
 
-        Write-Host $index
 
-    }
+    # $indexes[$i]
+
+    Write-Host "$indexes$($i)"
 }
